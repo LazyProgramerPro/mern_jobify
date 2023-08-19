@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Outlet, redirect, useLoaderData, useNavigate } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Dashboard";
 import { BigSidebar, Navbar, SmallSidebar } from "../components";
@@ -9,10 +10,10 @@ const DashboardContext = createContext();
 
 export const loader = async () => {
   try {
-    const { data } = await customFetch('/users/current-user');
+    const { data } = await customFetch("/users/current-user");
     return data;
   } catch (error) {
-    return redirect('/');
+    return redirect("/");
   }
 };
 

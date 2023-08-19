@@ -7,6 +7,8 @@ const LogoutContainer = () => {
   const [showLogout, setShowLogout] = useState(false);
   const { user, logoutUser } = useDashboardContext();
 
+  console.log("LogoutContainer:", user);
+
   return (
     <Wrapper>
       <button
